@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="style.css"> <!-- Linking external CSS file for styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet"> <!-- Including Google Fonts -->
+</head>
+<body>
+
+<div id="pokedex">
+    <!-- Search functionality -->
+    <div id="search-bar">
+        <input type="text" id="search-input" placeholder="Search by ID or Name...">
+        <button id="search-button">Search</button>
+        <select id="sort-select">
+            <option value="id">Sort by ID</option>
+            <option value="name">Sort by Name</option>
+        </select>
+    </div>
+    
+    <!-- Container for displaying Pokémon cards -->
+    <div id="pokemon-list" class="card-list"></div>
+    <button id="load-more">Load More</button>
+</div>
+
+<!-- Modal for detailed Pokémon information -->
+<div id="pokemon-detail-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span> <!-- Close modal button -->
+        <h2 id="pokemon-name"></h2> <!-- Pokémon name -->
+        
+        <!-- Pokémon image -->
+        <div class="pokemon-info-section">
+            <img id="pokemon-image" src="" alt="Pokemon">
+        </div>
+        
+        <!-- Basic Pokémon information (ID, Height, Weight) -->
+        <div class="pokemon-info-section">
+            <h3>Basic Information</h3>
+            <p id="pokemon-id"></p>
+            <p id="pokemon-height"></p>
+            <p id="pokemon-weight"></p>
+        </div>
+        
+        <!-- Pokémon types and weaknesses -->
+        <div class="pokemon-info-section">
+            <h3>Types and Weaknesses</h3>
+            <p id="pokemon-types"></p>
+            <p id="pokemon-weaknesses"></p>
+        </div>
+        
+        <!-- Pokémon stats -->
+        <div class="pokemon-info-section">
+            <h3>Stats</h3>
+            <p id="pokemon-stats"></p>
+        </div>
+        
+        <!-- Pokémon moves and abilities -->
+        <div class="pokemon-info-section">
+            <h3>Moves and Abilities</h3>
+            <p id="pokemon-moves"></p>
+            <p id="pokemon-abilities"></p>
+        </div>
+        
+        <!-- Navigation buttons -->
+        <button id="prev-pokemon" class="nav-button">Previous</button>
+        <button id="next-pokemon" class="nav-button">Next</button>
+    </div>
+</div>
+
+<script src="script.js"></script> <!-- Linking external JavaScript file for interactivity -->
+</body>
+</html>
